@@ -1,0 +1,21 @@
+
+    switch文の書式
+
+switch(値){
+    case 値①:
+        処理①
+        break;
+    case 値②:
+        処理②
+        break;
+    ・・・
+    default:
+        処理③
+        break;
+}
+
+
+break
+caseおよびswitchの後に出てくるbreak（ブレイク）というのは、処理の終了を意味します。
+breakがなくても、エラーにはなりませんが、
+そのあとの処理が続けて実行されてしまいますので、注意が必要です。

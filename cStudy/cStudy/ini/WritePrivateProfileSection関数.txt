@@ -1,0 +1,21 @@
+WritePrivateProfileSection関数
+INIファイルはWritePrivateProfileSection関数で作成および書き込みすることもできます。
+
+BOOL WritePrivateProfileSectionW(
+ LPCWSTR lpAppName,
+ LPCWSTR lpString,
+ LPCWSTR lpFileName
+);
+INIファイルlpFileNameのセクションlpAppNameにパラメーターlpStringを設定する。
+成功した場合は0以外を、失敗した場合は0を返す。
+第一引数lpAppNameはセクション名です。
+
+第二引数lpStringはキーと値の組み合わせの文字列です。
+これは複数のパラメータを同時に指定できます。
+各パラメータはNULL文字で区切ります。
+文字列の最後はダブルNULLで終了します。
+(ダブルNULLについてはダブルNULL終端文字列を参照)
+この文字列は最大65,535バイトまでに制限されています。
+
+第三引数はlpFileNameINIファイル名です。
+注意点はWritePrivateProfileString関数と同じです。

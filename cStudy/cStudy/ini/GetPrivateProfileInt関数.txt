@@ -1,0 +1,17 @@
+
+GetPrivateProfileInt関数
+
+取得する値が整数値の場合はGetPrivateProfileInt関数を使用することができます。
+
+UINT GetPrivateProfileInt(
+ LPCTSTR lpAppName,
+ LPCTSTR lpKeyName,
+ INT nDefault,
+ LPCTSTR lpFileName
+);
+
+INIファイルlpFileNameのセクションlpAppNameから、
+キーlpKeyNameの整数値を取得する。
+キーが見つからない場合は整数nDefaultを返す。
+戻り値はキーに関連付けられた整数値です。
+キーが見つからない場合は第三引数nDefaultの値が戻り値になります。

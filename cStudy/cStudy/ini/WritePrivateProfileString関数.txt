@@ -1,0 +1,25 @@
+WritePrivateProfileString関数
+INIファイルはWritePrivateProfileString関数で作成、およびパラメータを設定することができます。
+
+BOOL WritePrivateProfileStringW(
+ LPCWSTR lpAppName,
+ LPCWSTR lpKeyName,
+ LPCWSTR lpString,
+ LPCWSTR lpFileName
+);
+INIファイルlpFileNameのセクションlpAppNameに、キーlpKeyNameと値lpStringのパラメーターを設定する。
+成功した場合は0以外を、失敗した場合は0を返す。
+第一引数lpAppNameはセクション名です。
+セクション名は大文字と小文字を区別しません。
+
+第二引数lpKeyNameはキー名です。
+NULLを指定すると、そのセクションのすべてのパラメーターとセクション自体を削除します。
+
+第三引数lpStringはキーの値です。
+NULLを指定すると、そのキーを削除します。
+
+第四引数lpFileNameはINIファイル名です。
+ファイルが存在しない場合は作成します。
+ここにはフルパス(絶対パス)を指定する必要があります。
+ファイル名だけを記述すると相対パスでの指定にはならず、Windowsフォルダ内からファイルを検索、および作成しようとします。
+(書き込み権限がないと関数は失敗します)
