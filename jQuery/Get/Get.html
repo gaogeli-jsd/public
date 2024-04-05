@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  $("#btn_text").click(function(){
+    alert("Text: " + $("#test").text());
+  });
+
+  $("#btn_html").click(function(){
+    alert("HTML: " + $("#test").html());
+  });
+  
+  $("#btn_value").click(function(){
+    alert("Value: " + $("#test_input").val());
+  });
+    
+  $("#btn_href").click(function(){
+    alert($("#w3s").attr("href"));
+  });
+      
+});
+</script>
+</head>
+<body>
+
+<h4>Get Content - text(), html(), and val()</h4>
+
+Three simple, but useful, jQuery methods for DOM manipulation are:
+
+<ul>
+<li>text() - Sets or returns the text content of selected elements</li>
+<li>html() - Sets or returns the content of selected elements (including HTML markup)</li>
+<li>val() - Sets or returns the value of form fields</li>
+</ul>
+The following example demonstrates how to get content with the jQuery text() and html() methods:
+
+<h5>Example</h5>
+
+<table>
+<tr>
+<td width=30></td>
+<td>
+<div style="width:600px; overflow:auto; border:5px outset blue; background-color:lightblue; text-align:leftr;">
+<table>
+<tr>
+<td width=30></td>
+<td>
+<pre>
+$("#btn_text").click(function(){
+  alert("Text: " + $("#test").text());
+});
+$("#btn_html").click(function(){
+  alert("HTML: " + $("#test").html());
+});
+</pre>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+
+<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+
+<button id="btn_text">Show Text</button>
+<button id="btn_html">Show HTML</button>
+
+<hr>
+
+The following example demonstrates how to get the value of an input field with the jQuery val() method:
+
+<h5>Example</h5>
+
+<table>
+<tr>
+<td width=30></td>
+<td>
+<div style="width:600px; overflow:auto; border:5px outset blue; background-color:lightblue; text-align:leftr;">
+<table>
+<tr>
+<td width=30></td>
+<td>
+<pre>
+$("#btn_value").click(function(){
+  alert("Value: " + $("#test_input").val());
+});
+</pre>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+
+<p>Name: <input type="text" id="test_input" value="Mickey Mouse"></p>
+
+<button id="btn_value">Show Value</button>
+
+<hr>
+
+<h4>Get Attributes - attr()</h4>
+The jQuery attr() method is used to get attribute values.
+
+The following example demonstrates how to get the value of the href attribute in a link:
+
+<h5>Example</h5>
+
+<table>
+<tr>
+<td width=30></td>
+<td>
+<div style="width:600px; overflow:auto; border:5px outset blue; background-color:lightblue; text-align:leftr;">
+<table>
+<tr>
+<td width=30></td>
+<td>
+<pre>
+$("#btn_href").click(function(){
+  alert($("#w3s").attr("href"));
+});
+</pre>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+
+<p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+
+<button id="btn_href">Show href Value</button>
+
+</body>
+</html>

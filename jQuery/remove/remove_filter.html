@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  $("#btn_1").click(function(){
+    $("p").remove(".test");
+  });
+
+  $("#btn_2").click(function(){
+    $("p").remove(".test, .demo");
+  });
+    
+});
+</script>
+<style>
+.test {
+  color: red;
+  font-size: 15px;
+}
+
+.demo {
+  color: green;
+  font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>Filter the Elements to be Removed</h3>
+<pre>
+The jQuery remove() method also accepts one parameter, which allows you to filter the elements to be removed.
+
+The parameter can be any of the jQuery selector syntaxes.
+</pre>
+
+<hr>
+
+<p>This is a paragraph.</p>
+<p class="test">This is p element with class="test".</p>
+<p class="test">This is p element with class="test".</p>
+<p class="demo">This is p element with class="demo".</p>
+
+<hr>
+
+<pre>
+The following example removes all &lt;p&gt; elements with class="test":  
+</pre>
+
+<h4>Example</h4>
+
+<table>
+<tr>
+<td width=30></td>
+<td>
+<div style="width:600px; overflow:auto; border:5px outset blue; background-color:lightblue; text-align:leftr;">
+<table>
+<tr>
+<td width=30></td>
+<td>
+<pre>
+$("p").remove(".test");
+</pre>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+
+<button id="btn_1">Remove all p elements with class="test"</button>
+
+<hr>
+
+<pre>
+This example removes all &lt;p&gt; elements with class="test" and class="demo":  
+</pre>
+
+<h4>Example</h4>
+
+<table>
+<tr>
+<td width=30></td>
+<td>
+<div style="width:600px; overflow:auto; border:5px outset blue; background-color:lightblue; text-align:leftr;">
+<table>
+<tr>
+<td width=30></td>
+<td>
+<pre>
+$("p").remove(".test, .demo");
+</pre>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+
+
+<button id="btn_2">Remove all p elements with class="test" and class="demo"</button>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  $("#button_run").click(function(){
+    $("#p1").css("color", "red")
+      .slideUp(2000)
+      .slideDown(2000);
+  });
+  
+  $("#button_reset").click(function(){
+    $("#p1").css("color", "black");
+    alert("hi from --- Reset");
+  });
+  
+});
+</script>
+</head>
+<body>
+
+<p id="p1">jQuery is fun!!</p>
+
+<button id="button_run">Run</button>
+<button id="button_reset">Reset</button>
+
+</body>
+</html>

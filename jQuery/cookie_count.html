@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<script src="jquery-3.6.0.js"></script>
+<script src="jquery.cookie.js"></script>
+<script src="js.cookie.js"></script>
+
+<script>
+$(document).ready(function(){
+  
+  	var cookie = $.cookie('cookie');    
+	if(cookie){
+    	$('.js-count-num').text(cookie);
+	}
+	else{
+    	$('.js-count-num').text(0);
+	}
+	
+	var count = $('.js-count-num').text();
+	
+	$('.js-count-btn').on('click',function(){
+    	count++;
+    	$.cookie( "cookie",count);
+    	$('.js-count-num').text(count);
+	});
+	
+	$('.js-reset-btn').on('click',function(){
+    	count = 0;
+//    	$.removeCookie( "cookie");
+    	$('.js-count-num').text(count);
+	});
+
+});
+
+
+/*
+
+https://www.w3schools.com/js/js_cookies.asp
+
+*/
+</script>
+
+<script>
+function showCount(){
+	alert(" hi --- ");
+}
+
+function deleteCookie() {
+	var name ="cookie";
+  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+function getCookie() {
+	var name ="cookie";
+   var cookie =  Cookies.get('myCookie');
+	alert(" hi --- cookie = " + cookie);
+}
+
+function setCookie() {
+	Cookies.set('myCookie', 'myCookieValue', { expires: 7 });
+//	Cookies.set('name', 'value', { expires: 7 })
+	alert(" hi --- setCookie ! ");
+
+}
+
+
+
+</script>
+
+
+
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p>「カウントアップ」クリックでカウントアップし、ブラウザを終了しない限り値を維持します。<br>
+「リセット」クリックでcookieを削除します。</p>
+<p>カウント:<span class="js-count-num"></span></p>
+<button class="js-count-btn">カウントアップ</button><button class="js-reset-btn">リセット</button>
+
+<a href="javascript:showCount();">showCount</a><BR>
+<a href="javascript:deleteCookie();">deleteCookie</a><BR>
+<a href="javascript:setCookie();">setCookie</a><BR>
+<a href="javascript:getCookie();">getCookie</a><BR>
+</body>
+</html>

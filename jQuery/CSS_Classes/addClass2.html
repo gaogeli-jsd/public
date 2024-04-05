@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").addClass("important blue");
+  });
+});
+</script>
+<style>
+.important {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.blue {
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+<h3>jQuery addClass() Method</h3>
+The following example shows how to add class attributes to different elements. Of course you can select multiple elements, when adding classes:
+
+<h4>Example</h4>
+
+<table>
+<tr>
+<td width=30></td>
+<td>
+<div style="width:600px; overflow:auto; border:5px outset blue; background-color:lightblue; text-align:leftr;">
+<table>
+<tr>
+<td width=30></td>
+<td>
+<pre>
+$("button").click(function(){
+  $("#div1").addClass("important blue");
+});
+</pre>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+
+<hr>
+
+<div id="div1">This is some text.</div>
+<div id="div2">This is some text.</div>
+<br>
+
+<button>Add classes to first div element</button>
+
+</body>
+</html>

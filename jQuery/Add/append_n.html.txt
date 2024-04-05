@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+function appendText() {
+  var txt1 = "<p>Text.</p>";        // Create text with HTML
+  var txt2 = $("<p></p>").text("Text.");  // Create text with jQuery
+  var txt3 = document.createElement("p");
+  txt3.innerHTML = "Text.";         // Create text with DOM
+  $("body").append(txt1, txt2, txt3);   // Append new elements
+}
+</script>
+</head>
+<body>
+
+<h3>Add Several New Elements With append() and prepend()</h3>
+
+<pre>
+In both examples above, we have only inserted some text/HTML at the beginning/end of the selected HTML elements.
+
+However, both the append() and prepend() methods can take an infinite number of new elements as parameters. 
+The new elements can be generated with text/HTML (like we have done in the examples above),
+with jQuery, or with JavaScript code and DOM elements.
+
+In the following example, we create several new elements. 
+The elements are created with text/HTML, jQuery, and JavaScript/DOM. 
+Then we append the new elements to the text with the append() method (this would have worked for prepend() too) :
+</pre>
+
+<h4>Example</h4>
+
+<table>
+<tr>
+<td width=30></td>
+<td>
+<div style="width:700px; overflow:auto; border:5px outset blue; background-color:lightblue; text-align:leftr;">
+<table>
+<tr>
+<td width=30></td>
+<td>
+<pre>
+function appendText() {
+  var txt1 = &quot;&lt;p>Text.&lt;/p&gt;&quot;;               // Create element with HTML 
+  var txt2 = $(&quot;&lt;p&gt;&lt;/p&gt;&quot;).text(&quot;Text.&quot;);   // Create with jQuery
+  var txt3 = document.createElement(&quot;p&quot;);  // Create with DOM
+  txt3.innerHTML = &quot;Text.&quot;;
+  $(&quot;body&quot;).append(txt1, txt2, txt3);      // Append the new elements
+}
+</pre>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+
+<hr>
+
+<p>This is a paragraph.</p>
+<button onclick="appendText()">Append text</button>
+
+</body>
+</html>

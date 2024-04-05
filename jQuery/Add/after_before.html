@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("img").before("<b>Before</b>");
+  });
+
+  $("#btn2").click(function(){
+    $("img").after("<i>After</i>");
+  });
+});
+</script>
+</head>
+<body>
+
+<h3>jQuery after() and before() Methods</h3>
+
+The jQuery after() method inserts content AFTER the selected HTML elements.
+
+The jQuery before() method inserts content BEFORE the selected HTML elements.
+
+<h4>Example</h4>
+
+<table>
+<tr>
+<td width=30></td>
+<td>
+<div style="width:700px; overflow:auto; border:5px outset blue; background-color:lightblue; text-align:leftr;">
+<table>
+<tr>
+<td width=30></td>
+<td>
+<pre>
+$("img").after("Some text after");
+
+$("img").before("Some text before");
+</pre>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+
+<hr>
+
+<img src="fuji.jpg" alt="jQuery" width="200" height="140"><br><br>
+
+<button id="btn1">Insert before</button>
+<button id="btn2">Insert after</button>
+
+</body>
+</html>
